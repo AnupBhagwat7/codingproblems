@@ -15,7 +15,7 @@ public class States {
 
         Thread newT = new Thread(() -> {});
 
-        System.out.println("Thread in new state "+ newT.getState());
+        System.out.println("Thread in state "+ newT.getState());
 
     }
 
