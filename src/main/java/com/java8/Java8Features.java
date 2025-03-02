@@ -32,6 +32,7 @@ public class Java8Features {
         map.put(3,"B");
         map.put(0,"C");
         map.put(2,"B");
+        //map.put(null, "E");
 
         map.entrySet().stream().forEach(entry -> System.out.println(entry.getKey() +" "+ entry.getValue()) );
 

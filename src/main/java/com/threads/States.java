@@ -26,5 +26,7 @@ public class States {
 
         System.out.println("Thread in new state "+ runnableT.getState());
 
+        System.out.println("Thread in state "+ runnableT.getState());
+
     }
 }

@@ -30,7 +30,8 @@ public class CountDuplicateCharacters {
                 }
             //}
         }
-        map.entrySet().stream().filter(m -> m.getValue()>1).forEach(characterIntegerEntry -> System.out.println(characterIntegerEntry.getKey()));
+        map.entrySet().stream().filter(m -> m.getValue()>1).
+                forEach(characterIntegerEntry -> System.out.println(characterIntegerEntry.getKey()));
 
         System.out.println(map);
 
@@ -40,7 +41,7 @@ public class CountDuplicateCharacters {
 
         System.out.println(map1);
 
-        map1.entrySet().stream().forEach(m -> System.out.println(m));
+        map1.entrySet().stream().forEach(System.out::println);
 
         String x ="Book";
         String y ="Book";

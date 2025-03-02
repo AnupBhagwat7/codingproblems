@@ -6,13 +6,13 @@ public class TerminatedState {
 
         TerminatedState terminatedState = new TerminatedState();
         try {
-            terminatedState.terminateStete();
+            terminatedState.terminateState();
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
     }
 
-    public void terminateStete() throws InterruptedException {
+    public void terminateState() throws InterruptedException {
 
         Thread t = new Thread(()-> {
 

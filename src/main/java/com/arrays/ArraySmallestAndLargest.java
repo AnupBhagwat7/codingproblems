@@ -7,7 +7,7 @@ public class ArraySmallestAndLargest {
 
     public static void main(String[] args) {
 
-        Integer[] arr = new Integer[]{3, 4,5, 1, 5,  9,7 , 6};
+        Integer[] arr = {3, 4,5, 1, 5,  9,7 , 6};
 
         findSmallestAndLargestNumberFromArray(arr);
 
@@ -17,6 +17,7 @@ public class ArraySmallestAndLargest {
     private static void removeDuplicates(Integer[] arr) {
 
         List<Integer> list = Arrays.asList(arr);
+        System.out.println(new HashSet<>(Arrays.asList(arr)));
         Set<Integer> s = new HashSet(list);
         System.out.println(s);
     }

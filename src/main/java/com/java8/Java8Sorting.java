@@ -21,7 +21,7 @@ public class Java8Sorting {
         vehileLines.add(new VehicleLine("321", "Hyundai", "camry", "lx", "2020"));
 
         Map<String, List<VehicleLine>> map = vehileLines.stream().
-                sorted(Comparator.comparing(VehicleLine::getMake).
+                sorted(Comparator.comparing(VehicleLine::getMake).reversed().
                         thenComparing(VehicleLine::getVin)).collect(Collectors.groupingBy(VehicleLine::getMake));
         System.out.println(map);
 

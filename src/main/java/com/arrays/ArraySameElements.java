@@ -7,7 +7,7 @@ import java.util.Set;
 public class ArraySameElements {
 
     public static void main(String[] args) {
-        Integer[] a1 = {1,2,3,2,1};
+        Integer[] a1 = {1,2,3,2,1,4};
         Integer[] a2 = {1,2,3};
         Integer[] a3 = {1,2,3,4};
 
@@ -27,7 +27,9 @@ public class ArraySameElements {
 
         for(Object obj : uniqueElements1) {
             // element not present in both?
-            if (!uniqueElements2.contains(obj)) return false;
+            if (!uniqueElements2.contains(obj)) {
+                return false;
+            }
         }
 
         return true;

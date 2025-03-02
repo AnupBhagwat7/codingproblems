@@ -17,5 +17,13 @@ public class ImmutableStrings {
         String s4 = "Test";
         System.out.println(s3.hashCode());
         System.out.println(s4.hashCode());
+
+        StringBuilder sb = new StringBuilder("Anup");
+        System.out.println(sb);
+        System.out.println(sb.append(" Bhagwat"));
+
+        StringBuilder sbuff = new StringBuilder("Anup");
+        System.out.println(sbuff);
+        System.out.println(sbuff.append(" Bhagwat"));
     }
 }

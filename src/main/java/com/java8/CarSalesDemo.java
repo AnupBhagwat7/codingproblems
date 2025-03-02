@@ -39,6 +39,11 @@ public class CarSalesDemo {
         System.out.println(carSales.stream().sorted(Comparator.comparing(CarSales::getVolume).reversed()).
                 collect(Collectors.groupingBy(CarSales::getModel)));
 
+        carSales.stream().filter(car -> car.volume > 30).collect(Collectors.toList()).forEach(System.out::println);
+
+        System.out.println(carSales.stream().anyMatch(carSales1 -> carSales1.volume > 1000));
+
+        System.out.println(carSales.stream().map(carSales1 -> carSales1.model.toUpperCase()).collect(Collectors.toList()));
     }
 
 
@@ -66,6 +71,18 @@ class CarSales {
 
     public long getVolume() {
         return volume;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
+    }
+
+    public void setVolume(long volume) {
+        this.volume = volume;
     }
 
     @Override

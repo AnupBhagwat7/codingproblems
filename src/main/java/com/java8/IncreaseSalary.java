@@ -2,7 +2,9 @@ package com.java8;
 
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class IncreaseSalary{
 
@@ -14,7 +16,10 @@ public class IncreaseSalary{
 
         employees.stream().forEach(employee1 -> employee1.setSalary(employee1.getSalary()*1.2));
 
+        employees.stream().filter(employee1 -> employee1.getName().contains("Doe")).collect(Collectors.toList()).forEach(System.out::println);
         System.out.println(employees);
+
+        System.out.println(employees.stream().sorted(Comparator.comparing(Employee1::getSalary).reversed()).collect(Collectors.toList()));
     }
 }
 

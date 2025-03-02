@@ -29,11 +29,12 @@ class Test implements Runnable{
 }
 public class ThreadDemo {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
         Thread t1 = new Thread(new Test(777777));
         Thread t2 = new Thread(new Test(2));
 
+        Thread.sleep(9000);
         t1.start();
         System.out.println("T1 is in "+ t1.getState());
 
